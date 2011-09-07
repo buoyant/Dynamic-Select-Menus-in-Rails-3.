@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: 
+  fathername: 
+  email: 
+  dob: 
+  district_id: 
+  state_id: 
+
+two:
+  name: 
+  fathername: 
+  email: 
+  dob: 
+  district_id: 
+  state_id: 

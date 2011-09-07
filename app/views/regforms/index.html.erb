@@ -1,0 +1,33 @@
+<h1>Listing regforms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Fathername</th>
+    <th>Email</th>
+    <th>Dob</th>
+    <th>District</th>
+    <th>State</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @regforms.each do |regform| %>
+  <tr>
+    <td><%= regform.name %></td>
+    <td><%= regform.fathername %></td>
+    <td><%= regform.email %></td>
+    <td><%= regform.dob %></td>
+    <td><%= regform.district_id %></td>
+    <td><%= regform.state_id %></td>
+    <td><%= link_to 'Show', regform %></td>
+    <td><%= link_to 'Edit', edit_regform_path(regform) %></td>
+    <td><%= link_to 'Destroy', regform, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Regform', new_regform_path %>

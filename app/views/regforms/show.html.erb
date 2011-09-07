@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @regform.name %>
+</p>
+
+<p>
+  <b>Fathername:</b>
+  <%= @regform.fathername %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @regform.email %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @regform.dob %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @regform.district_id %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @regform.state_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_regform_path(@regform) %> |
+<%= link_to 'Back', regforms_path %>
