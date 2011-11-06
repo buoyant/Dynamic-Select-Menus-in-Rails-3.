@@ -1,6 +1,49 @@
 <h1>Editing regform</h1>
 
-<%= render 'form' %>
+<%= form_for(@regform) do |f| %>
+    <% if @regform.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@regform.errors.count, "error") %> prohibited this regform from being saved:</h2>
+
+          <ul>
+            <% @regform.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :fathername %><br />
+      <%= f.text_field :fathername %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :dob %><br />
+      <%= f.text_field :dob %>
+    </div>
+    <div class="field">
+      <%= f.label :state_id %><br />
+      <%= f.collection_select :state_id, State.all, :id, :name, :prompt => 'Select State' %>
+    </div>
+    <div class="field">
+      <%= f.label :district_id %><br />
+      <%= f.collection_select :district_id, District.find_all_by_state_id(@regform.state_id), :id, :name, :prompt => 'Select District' %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
 
 <%= link_to 'Show', @regform %> |
 <%= link_to 'Back', regforms_path %>
+

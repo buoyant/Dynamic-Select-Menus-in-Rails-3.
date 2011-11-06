@@ -88,4 +88,6 @@ class RegformsController < ApplicationController
       format.js
     end
   end
+
 end
+

@@ -3,11 +3,10 @@ $('#regform_district_id').empty();
 <% for district in @districts %>
 
 
-   //  alert(<%= district.id %>);
+   // alert(<%= district.id %>);
 
       $('#regform_district_id').append($("<option></option>").attr("value",<%= district.id %>).text('<%= district.name %>'));
 
 
 <% end %>
-
 

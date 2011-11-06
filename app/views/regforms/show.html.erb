@@ -22,14 +22,15 @@
 
 <p>
   <b>District:</b>
-  <%= @regform.district_id %>
+  <%= @regform.district.name %>
 </p>
 
 <p>
   <b>State:</b>
-  <%= @regform.state_id %>
+  <%= @regform.state.name %>
 </p>
 
 
 <%= link_to 'Edit', edit_regform_path(@regform) %> |
 <%= link_to 'Back', regforms_path %>
+

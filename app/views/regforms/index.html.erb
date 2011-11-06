@@ -19,8 +19,8 @@
     <td><%= regform.fathername %></td>
     <td><%= regform.email %></td>
     <td><%= regform.dob %></td>
-    <td><%= regform.district_id %></td>
-    <td><%= regform.state_id %></td>
+    <td><%= regform.district.name %></td>
+    <td><%= regform.state.name %></td>
     <td><%= link_to 'Show', regform %></td>
     <td><%= link_to 'Edit', edit_regform_path(regform) %></td>
     <td><%= link_to 'Destroy', regform, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -31,3 +31,4 @@
 <br />
 
 <%= link_to 'New Regform', new_regform_path %>
+
