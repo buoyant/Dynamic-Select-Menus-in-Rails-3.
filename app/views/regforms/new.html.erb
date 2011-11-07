@@ -1,5 +1,11 @@
 <h1>New regform</h1>
 
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    jQuery('#regform_district_id').html("<option value=''>Select District</option>");
+});
+</script>
 <%= render 'form' %>
 
 <%= link_to 'Back', regforms_path %>
